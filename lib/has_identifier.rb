@@ -9,6 +9,11 @@ module HasIdentifier
 
   ALPHABET = [*?1..?9, *?A..?H, *?J..?N, *?P..?Z]
 
+
+  def short_identifier
+    identifier.split("-").first
+  end
+
   def gen_id_char(n)
     SecureRandom.send(:choose, ALPHABET, n)
   end
@@ -16,17 +21,6 @@ module HasIdentifier
   def generate_identifier
     self.identifier ||= "#{identifier_prefix}#{gen_id_char(5)}-#{gen_id_char(5)}-#{gen_id_char(6)}"
   end
-
-  # included do
-  #   class_attribute :identifier_prefix
-  #
-  #   validates(:identifier, presence: true)
-  #
-  #   after_initialize{
-  #     def r(i); SecureRandom.send(:choose, [*?1..?9, *?A..?H, *?J..?N, *?P..?Z], i); end
-  #     self.identifier ||= "#{identifier_prefix}#{r(5)}-#{r(5)}-#{r(6)}"
-  #   }
-  # end
 end
 
 
