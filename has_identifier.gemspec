@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "has_identifier"
-  spec.version       = "0.0.4"
+  spec.version       = "0.0.5"
   spec.authors       = ["Tim Kretschmer"]
   spec.email         = ["tim@krtschmr.de"]
   spec.description   = %q{extend to base58 readable short uuid-style ids}
