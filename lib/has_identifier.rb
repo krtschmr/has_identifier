@@ -19,7 +19,7 @@ module HasIdentifier
   end
 
   def generate_identifier
-    self.identifier ||= "#{identifier_prefix}#{gen_id_char(5)}-#{gen_id_char(5)}-#{gen_id_char(6)}"
+    self.identifier ||= "#{identifier_prefix}#{gen_id_char(5)}-#{gen_id_char(5)}-#{gen_id_char(6)}" if respond_to?(:identifier)
   end
 end
 
