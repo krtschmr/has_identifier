@@ -1,13 +1,13 @@
 PATH
   remote: .
   specs:
-    has_identifier (0.0.1)
+    has_identifier (0.0.6)
 
 GEM
   remote: https://rubygems.org/
   specs:
     diff-lcs (1.3)
-    rake (12.3.2)
+    rake (12.3.3)
     rspec (3.8.0)
       rspec-core (~> 3.8.0)
       rspec-expectations (~> 3.8.0)
